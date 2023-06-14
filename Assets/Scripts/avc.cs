@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class avc : MonoBehaviour
 {
-   
     public GameObject floor;
     public GameObject floorpre;
     public GameObject trannha;
     public GameObject trannhapre;
     public GameObject contho;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +23,12 @@ public class avc : MonoBehaviour
         {
             var tempCeiling = trannhapre;
             var tempFloor = floorpre;
-            floorpre = floor;
             trannhapre = trannha;
-            tempCeiling.transform.position += new Vector3(80, 0, 0);
-            tempFloor.transform.position += new Vector3(80, 0, 0);
+            floorpre = floor;
+            tempCeiling.transform.position += new Vector3(50, 0, 0);
+            tempFloor.transform.position += new Vector3(50, 0, 0);
             trannha = tempCeiling;
             floor = tempFloor;
-
         }
     }
 }
