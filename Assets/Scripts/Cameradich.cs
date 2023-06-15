@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class Cameradich : MonoBehaviour
 {
     public float cameraSpeed = 1f; // T?c ?? di chuy?n c?a camera
 
