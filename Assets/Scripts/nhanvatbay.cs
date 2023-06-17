@@ -10,6 +10,7 @@ public class nhanvatbay : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
 
+    private bool isDead = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,24 +18,26 @@ public class nhanvatbay : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (!isDead) // Ki?m tra xem chu?t có s?ng hay ?ã ch?t
         {
-           
-           // rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-           rb.AddForce( Vector2.up * jumpForce);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rb.AddForce(Vector2.up * jumpForce);
+            }
+        }
+        else
+        {
+
         }
     }
 
-    //void FixedUpdate()
-    //{
-    //    rb.AddForce(new Vector2(0f, -9.8f), ForceMode2D.Force);
-    //}
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        HitByLaser(collider);
+    }
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Ground"))
-    //    {
-    //        isJumping = false;
-    //    }
-    //}
+    void HitByLaser(Collider2D laser)
+    {
+        isDead = true;
+    }
 }

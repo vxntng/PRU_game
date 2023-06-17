@@ -327,7 +327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a0dee04aa2a32468ba87a675f4d9d7, type: 3}
   m_Name: 
@@ -338,6 +338,48 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5663410436998448241, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
   m_PrefabInstance: {fileID: 5663410437515333938}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &601822535
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601822531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.39, y: 3.7}
+    newSize: {x: 0.39, y: 3.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18, y: 3.1}
+  m_EdgeRadius: 0
+--- !u!114 &601822536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601822531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c196d7a60cd1d78448ffa9510e75ac86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserOnSprite: {fileID: 0}
+  laserOffSprite: {fileID: 0}
+  toggleInterval: 0.5
+  rotationSpeed: 1
 --- !u!1 &1080730830
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,17 +675,6 @@ MonoBehaviour:
   trannha: {fileID: 334815664}
   trannhapre: {fileID: 2066896413}
   contho: {fileID: 1274998215}
-  obstacle1: {fileID: 0}
-  obstacle2: {fileID: 0}
-  obstacle3: {fileID: 0}
-  obstacle4: {fileID: 0}
-  obstaclePrefab: {fileID: 601822531}
-  minObstacleY: 0
-  maxObstacleY: 3
-  minObstacleSpacing: 5
-  maxObstacleSpacing: 10
-  minObstacleScaleY: 2
-  maxObstacleScaleY: 7
 --- !u!1 &2066896413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: laser
       objectReference: {fileID: 0}
+    - target: {fileID: 5663410436998448244, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5663410436998448245, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1098,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5663410436998448245, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5663410436998448245, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
       propertyPath: m_LocalScale.z
@@ -1144,5 +1179,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5663410436998448247, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663410436998448247, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
+      propertyPath: laserOnSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 55d2db9450628c2418b4ce781fb9812b, type: 3}
+    - target: {fileID: 5663410436998448247, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
+      propertyPath: rotationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5663410436998448247, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
+      propertyPath: laserOffSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bcc1e285bd973f4cb299a929d7c7c02, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8e041b824631049a25ceed781aa7dc, type: 3}
