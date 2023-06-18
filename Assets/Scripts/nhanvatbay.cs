@@ -6,10 +6,10 @@ public class nhanvatbay : MonoBehaviour
 {
     // Start is called before the first frame update
     public float jumpForce;
-    
+
     public Rigidbody2D rb;
     public float speed;
-
+    public Animator contho;
     private bool isDead = false;
     void Start()
     {
@@ -34,10 +34,12 @@ public class nhanvatbay : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         HitByLaser(collider);
+        
     }
 
     void HitByLaser(Collider2D laser)
     {
         isDead = true;
+        contho.SetBool("isDead", true);
     }
 }
