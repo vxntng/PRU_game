@@ -40,6 +40,6 @@ public class nhanvatbay : MonoBehaviour
     void HitByLaser(Collider2D laser)
     {
         isDead = true;
-        contho.SetBool("isDead", true);
+      //      contho.SetBool("isDead", true);
     }
 }
