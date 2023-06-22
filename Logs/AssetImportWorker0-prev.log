@@ -15,7 +15,7 @@ D:/fpt/ki7/pru211m/gamePRU/gamePRU
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51822
+58870
 Successfully changed project path to: D:/fpt/ki7/pru211m/gamePRU/gamePRU
 D:/fpt/ki7/pru211m/gamePRU/gamePRU
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/fpt/ki7/pru211m/gamePRU/gamePRU
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12212] Host "[IP] 10.8.0.14 [Port] 0 [Flags] 2 [Guid] 1117693111 [EditorId] 1117693111 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2F7BB5J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [16796] Host "[IP] 10.33.12.252 [Port] 0 [Flags] 2 [Guid] 4127516926 [EditorId] 4127516926 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2F7BB5J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12212] Host "[IP] 10.8.0.14 [Port] 0 [Flags] 2 [Guid] 1117693111 [EditorId] 1117693111 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2F7BB5J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16796] Host "[IP] 10.33.12.252 [Port] 0 [Flags] 2 [Guid] 4127516926 [EditorId] 4127516926 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2F7BB5J) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 145.47 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 105.64 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path D:/fpt/unity/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -67,92 +67,92 @@ Initialize mono
 Mono path[0] = 'D:/fpt/unity/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'D:/fpt/unity/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/fpt/unity/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56848
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/fpt/unity/2021.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/fpt/unity/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007458 seconds.
+Registered in 0.006061 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 148.24 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 111.45 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.119 seconds
+- Completed reload, in  0.858 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1120ms)
-		BeginReloadAssembly (170ms)
+	ReloadAssembly (859ms)
+		BeginReloadAssembly (135ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (777ms)
-			LoadAssemblies (169ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (614ms)
+			LoadAssemblies (133ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (196ms)
+			SetupTypeCache (154ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (448ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (359ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (148ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (214ms)
-				ProcessInitializeOnLoadMethodAttributes (71ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (112ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (176ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010418 seconds.
+Registered in 0.007684 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\fpt\ki7\pru211m\gamePRU\gamePRU\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\fpt\ki7\pru211m\gamePRU\gamePRU\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 170.15 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 163.14 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.148 seconds
+- Completed reload, in  1.555 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2149ms)
-		BeginReloadAssembly (261ms)
+	ReloadAssembly (1556ms)
+		BeginReloadAssembly (154ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (1681ms)
-			LoadAssemblies (204ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1273ms)
+			LoadAssemblies (149ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (464ms)
+			SetupTypeCache (322ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (116ms)
-			SetupLoadedEditorAssemblies (858ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (704ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (170ms)
-				BeforeProcessingInitializeOnLoad (170ms)
-				ProcessInitializeOnLoadAttributes (420ms)
-				ProcessInitializeOnLoadMethodAttributes (80ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (163ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (318ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (17ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.71 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3741 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 36 unused Assets / (87.7 KB). Loaded Objects now: 4202.
 Memory consumption went from 143.2 MB to 143.1 MB.
-Total: 3.653400 ms (FindLiveObjects: 0.317400 ms CreateObjectMapping: 0.254600 ms MarkObjects: 2.978500 ms  DeleteObjects: 0.102000 ms)
+Total: 3.766800 ms (FindLiveObjects: 0.318600 ms CreateObjectMapping: 0.258700 ms MarkObjects: 3.081400 ms  DeleteObjects: 0.107200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -167,19 +167,137 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 327009.878421 seconds.
-  path: Assets/Simple 2D Platformer BE2/ReadMe/Scripts/Editor
-  artifactKey: Guid(3ad9b87dffba344c89909c6d1b1c17e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Simple 2D Platformer BE2/ReadMe/Scripts/Editor using Guid(3ad9b87dffba344c89909c6d1b1c17e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c0e8e2a99804f7f249b7fb1c7f3743c') in 0.015142 seconds 
+  Time since last request: 410273.554998 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/Idle 0.controller
+  artifactKey: Guid(6e3ac93bfe1616846ac0f309118ea035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/Idle 0.controller using Guid(6e3ac93bfe1616846ac0f309118ea035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92a9615c91cbe37d337817d447345f0c') in 0.041698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.770725 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/Idle 0 (1).controller
+  artifactKey: Guid(79d16fc08cba9614f94b3296b414d6bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/Idle 0 (1).controller using Guid(79d16fc08cba9614f94b3296b414d6bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1339a1925b133fe1fd63dc398083ef73') in 0.011420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.852630 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/conxanh.anim
+  artifactKey: Guid(b7d7e83a600982f42bc2b2f657e1576c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/conxanh.anim using Guid(b7d7e83a600982f42bc2b2f657e1576c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8519e6d188cca5bbdd7bf2f0be3189d') in 0.014635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.868904 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/contrang.anim
+  artifactKey: Guid(e890f7c77ab3c8e4b835e4a341dd551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/contrang.anim using Guid(e890f7c77ab3c8e4b835e4a341dd551f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58497c2f28cec265e9e716ed8696528a') in 0.013663 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.036421 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/Bottom.controller
+  artifactKey: Guid(0db912c8d01e0b54c8ad190cc616fc61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/Bottom.controller using Guid(0db912c8d01e0b54c8ad190cc616fc61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c0e530a2dd11bbeb93c692ba8ce604') in 0.010279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.619973 seconds.
+  path: Assets/Prefab/contho.prefab
+  artifactKey: Guid(f82a76087c5135c43819b9c32be660ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/contho.prefab using Guid(f82a76087c5135c43819b9c32be660ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd361aa9ee76f09db24450186dce4c9ee') in 0.036140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefab/Platforms.png
+  artifactKey: Guid(2eadf92a51d8fe8419bdda457e807946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Platforms.png using Guid(2eadf92a51d8fe8419bdda457e807946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e56fa746f6f620a585497eaa548825') in 0.118888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.195583 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Audio/Atk Guard.wav
+  artifactKey: Guid(b01e23464ab1d6b42a325d18bb9c07d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Audio/Atk Guard.wav using Guid(b01e23464ab1d6b42a325d18bb9c07d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a9547331d8a77213f1000d9c8b2ffa3') in 0.069459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Audio/Defeat.wav
+  artifactKey: Guid(f6fd7d766e94d09429afb73b66089d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Audio/Defeat.wav using Guid(f6fd7d766e94d09429afb73b66089d82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '563380d24191309b7ad3677ef2c208f0') in 0.027724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Audio/Victory.wav
+  artifactKey: Guid(cc601d5912ae01540b1368b69b4000fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Audio/Victory.wav using Guid(cc601d5912ae01540b1368b69b4000fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f92eda347e879f62c18b4f25cd750ca') in 0.032116 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
-  path: Assets/Simple 2D Platformer BE2/ReadMe/Icon.png
-  artifactKey: Guid(6b868ddfc4bbd9b4d83c6c2708775a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Simple 2D Platformer BE2/ReadMe/Icon.png using Guid(6b868ddfc4bbd9b4d83c6c2708775a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4aa115ecc69c83d7058fa300f6f7f97') in 0.249365 seconds 
+  path: Assets/Bolt 2D LittleWars VE3/Audio/BGM.wav
+  artifactKey: Guid(070ad4920d2fcbc43940fe99bc6d6bec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Audio/BGM.wav using Guid(070ad4920d2fcbc43940fe99bc6d6bec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4655f38ab9ed790d79dce2bc55ebf792') in 0.032281 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000062 seconds.
-  path: Assets/Simple 2D Platformer BE2/ReadMe/Scripts
-  artifactKey: Guid(f5edb77054abb1346bc42df135f782eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Simple 2D Platformer BE2/ReadMe/Scripts using Guid(f5edb77054abb1346bc42df135f782eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e7d70723d5a5e7596efd46a9bd04a49') in 0.013031 seconds 
+  Time since last request: 0.000018 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Audio/Atk Sword.wav
+  artifactKey: Guid(ea5fc2d2350a5d647b0763cc8f00f63e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Audio/Atk Sword.wav using Guid(ea5fc2d2350a5d647b0763cc8f00f63e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f494037a7defe24ea8328ccb1695e795') in 0.026964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.759639 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Demo/AcDemoBAU.overrideController
+  artifactKey: Guid(e79293e63e0e04b45ac1ed621f4015ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Demo/AcDemoBAU.overrideController using Guid(e79293e63e0e04b45ac1ed621f4015ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca01788fa8ecc9502f8dfd5a03e21207') in 0.038683 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Demo/AcDemoBWU.overrideController
+  artifactKey: Guid(50dbb4d63832bd942ad42be03492c202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Demo/AcDemoBWU.overrideController using Guid(50dbb4d63832bd942ad42be03492c202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fe8c3b90554ae75b43cc16a95393455') in 0.053080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Demo/AcDemoRS.overrideController
+  artifactKey: Guid(2687ddb9353644c469ebd6f2a362e26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Demo/AcDemoRS.overrideController using Guid(2687ddb9353644c469ebd6f2a362e26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231afc5b0ddb2d8f06fafc496640c507') in 0.058027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Demo/AcDemoRA.overrideController
+  artifactKey: Guid(638f37003c5be2e41acb83ff81f9be66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Demo/AcDemoRA.overrideController using Guid(638f37003c5be2e41acb83ff81f9be66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '219d0ebb627d7ea41bd6cebe994ca25d') in 0.053160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.634526 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Fonts/neodgm.ttf
+  artifactKey: Guid(2143a120cbd85fd408fbfb02d8d75b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Fonts/neodgm.ttf using Guid(2143a120cbd85fd408fbfb02d8d75b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e924eaa5df9e748543c9f1f45dcf816b') in 0.066848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.812103 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Particles/Destroy.prefab
+  artifactKey: Guid(c466b607a6e5c3747952eb93a58d356b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Particles/Destroy.prefab using Guid(c466b607a6e5c3747952eb93a58d356b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d187dee0dd67f7e73f146915a10bf3a') in 0.040667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Particles/MagicBlue.prefab
+  artifactKey: Guid(c04d7d9ca1195ee4faed972308a7e153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Particles/MagicBlue.prefab using Guid(c04d7d9ca1195ee4faed972308a7e153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27634fe1237453b301d5e5dbbe4440fd') in 0.020141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.175040 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Sprites/Base.png
+  artifactKey: Guid(85470783dfe21194994d9bef32d314bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Sprites/Base.png using Guid(85470783dfe21194994d9bef32d314bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec41bab8902f96d7aa4576b3520851a6') in 0.039444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Sprites/UI.png
+  artifactKey: Guid(3765a367fb48f9040bca18add088d6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Sprites/UI.png using Guid(3765a367fb48f9040bca18add088d6d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc2199e13561d0ef7b30b2ffc1e4e0c') in 0.084050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png
+  artifactKey: Guid(d3d81777536bc3a46a8c258cdf755e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bolt 2D LittleWars VE3/Sprites/Titles.png using Guid(d3d81777536bc3a46a8c258cdf755e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7109e4cb6d27c45c29c62bad91c91b3a') in 0.034390 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

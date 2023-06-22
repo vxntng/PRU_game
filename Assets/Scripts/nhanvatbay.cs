@@ -11,9 +11,15 @@ public class nhanvatbay : MonoBehaviour
     public float speed;
     public Animator contho;
     private bool isDead = false;
+
+    public Transform groundCheckTransform;
+    private bool isGround;
+    public LayerMask groundCheckLayerMask;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        contho = GetComponent<Animator>();
     }
 
     void Update()
@@ -25,10 +31,16 @@ public class nhanvatbay : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce);
             }
         }
-        else
-        {
+        
+        UpdateGroundedStatus();
+    }
 
-        }
+    void UpdateGroundedStatus()
+    {
+        //1
+        isGround = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);
+        //2
+        contho.SetBool("isGround", isGround);
     }
 
     void OnTriggerEnter2D(Collider2D collider)

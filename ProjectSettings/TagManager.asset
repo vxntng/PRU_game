@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - contho
   - 
   - Ground
   - 
@@ -44,4 +44,13 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 4193551437
+    locked: 0
+  - name: cay
+    uniqueID: 1144554767
+    locked: 0
+  - name: co
+    uniqueID: 3929060467
+    locked: 0
+  - name: player
+    uniqueID: 2307981841
     locked: 0
