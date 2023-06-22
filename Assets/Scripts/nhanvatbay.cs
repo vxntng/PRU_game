@@ -20,6 +20,7 @@ public class nhanvatbay : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         contho = GetComponent<Animator>();
+        HideGroundCheck();
     }
 
     void Update()
@@ -40,7 +41,8 @@ public class nhanvatbay : MonoBehaviour
         //1
         isGround = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);
         //2
-        contho.SetBool("isGround", isGround);
+        //   contho.SetBool("isGround", isGround);
+        contho.SetBool("isGround", !isGround);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -48,7 +50,12 @@ public class nhanvatbay : MonoBehaviour
         HitByLaser(collider);
         
     }
-
+    private bool isGroundCheckVisible = true;
+    void HideGroundCheck()
+    {
+        groundCheckTransform.gameObject.SetActive(false);
+        isGroundCheckVisible = false;
+    }
     void HitByLaser(Collider2D laser)
     {
         isDead = true;
