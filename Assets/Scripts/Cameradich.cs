@@ -5,8 +5,8 @@ using UnityEngine;
 public class Cameradich : MonoBehaviour
 {
     public float cameraSpeed = 1f; // T?c ?? di chuy?n c?a camera
+    public bool isCharacterDead = false; // Tr?ng thái s?ng/ch?t c?a nhân v?t
 
-    
     void Start()
     {
 
@@ -15,8 +15,12 @@ public class Cameradich : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float moveSpeed = cameraSpeed * Time.deltaTime; // Tính toán t?c ?? di chuy?n d?a trên th?i gian
-        transform.position += new Vector3(moveSpeed, 0f, 0f); // Di chuy?n camera
+        if (!isCharacterDead) // Ki?m tra tr?ng thái s?ng/ch?t c?a nhân v?t
+        {
+            float moveSpeed = cameraSpeed * Time.deltaTime;
+            transform.position += new Vector3(moveSpeed, 0f, 0f);
+        }
+
 
         // Các x? lý khác trong Update()
     }

@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSpeed: 2
+  isCharacterDead: 0
 --- !u!212 &519420034
 SpriteRenderer:
   m_ObjectHideFlags: 0

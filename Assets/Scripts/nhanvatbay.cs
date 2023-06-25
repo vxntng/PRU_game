@@ -15,12 +15,23 @@ public class nhanvatbay : MonoBehaviour
     public Transform groundCheckTransform;
     private bool isGround;
     public LayerMask groundCheckLayerMask;
-    
+
+    private Collider2D laserCollider;
+    private Collider2D groundCollider;
+    private Collider2D raserCollider;
+
+    private Cameradich cameraScript; // Tham chi?u t?i script "Cameradich"
+
+    public GameObject rocketObject;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         contho = GetComponent<Animator>();
         HideGroundCheck();
+
+        cameraScript = FindObjectOfType<Cameradich>();
+
+        rocketObject = GameObject.Find("Rocket");
     }
 
     void Update()
@@ -31,6 +42,12 @@ public class nhanvatbay : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce);
             }
+            AudioSource laserZap = laserCollider.gameObject.GetComponent<AudioSource>();
+            laserZap.Play();
+        }
+        else
+        {
+            rb.AddForce(Vector2.zero);
         }
        
         UpdateGroundedStatus();
@@ -46,6 +63,7 @@ public class nhanvatbay : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider)
+         
     {
         HitByLaser(collider);
         
@@ -56,9 +74,21 @@ public class nhanvatbay : MonoBehaviour
         groundCheckTransform.gameObject.SetActive(false);
         isGroundCheckVisible = false;
     }
+
+    public void HideRocket()
+    {
+        rocketObject.SetActive(false);
+    }
     void HitByLaser(Collider2D laser)
     {
         isDead = true;
-            contho.SetBool("isDead", true);
+        contho.SetBool("isDead", true);
+        cameraScript.isCharacterDead = true; // ??t tr?ng thái s?ng/ch?t c?a nhân v?t trong script "Cameradich" thành true
+
+        LaserController laserController = laserCollider.GetComponent<LaserController>();
+        if (laserController != null)
+        {
+    //        laserController.HideRocket();
+        }
     }
 }
