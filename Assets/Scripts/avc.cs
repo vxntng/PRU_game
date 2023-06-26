@@ -9,6 +9,10 @@ public class avc : MonoBehaviour
     public GameObject trannha;
     public GameObject trannhapre;
     public GameObject contho;
+    public GameObject cloud;
+    public GameObject tree;
+    public GameObject cloudpre;
+    public GameObject treepre;
 
     // Start is called before the first frame update
 
@@ -60,6 +64,15 @@ public class avc : MonoBehaviour
             tempFloor.transform.position += new Vector3(50, 0, 0);
             trannha = tempCeiling;
             floor = tempFloor;
+
+            var tempCloud = cloudpre;
+            var tempTree = treepre;
+            cloudpre = cloud;
+           treepre = tree;
+            tempCloud.transform.position += new Vector3(50, 0, 0);
+            tempTree.transform.position += new Vector3(50, 0, 0);
+            cloud = tempCloud;
+            treepre = tempTree;
         }
         if (contho.transform.position.x > obstacle2.transform.position.x)
         {

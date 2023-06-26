@@ -23,6 +23,68 @@ public class nhanvatbay : MonoBehaviour
     private Cameradich cameraScript; // Tham chi?u t?i script "Cameradich"
 
     public GameObject rocketObject;
+    //void Start()
+    //{
+    //    rb = GetComponent<Rigidbody2D>();
+    //    contho = GetComponent<Animator>();
+    //    HideGroundCheck();
+
+    //    cameraScript = FindObjectOfType<Cameradich>();
+
+    //    rocketObject = GameObject.Find("Rocket");
+    //}
+
+    //void Update()
+    //{
+    //    if (!isDead) // Ki?m tra xem chu?t có s?ng hay ?ã ch?t
+    //    {
+    //        if (Input.GetKey(KeyCode.Space))
+    //        {
+    //            rb.AddForce(Vector2.up * jumpForce);
+    //        }
+    //        //AudioSource laserZap = laserCollider.gameObject.GetComponent<AudioSource>();
+    //        //laserZap.Play();
+    //    }
+    //    else
+    //    {
+    //        rb.AddForce(Vector2.zero);
+    //    }
+
+    //    UpdateGroundedStatus();
+    //}
+
+    //void UpdateGroundedStatus()
+    //{
+    //    //1
+    //    isGround = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);
+    //    //2
+    //    //   contho.SetBool("isGround", isGround);
+    //    contho.SetBool("isGround", !isGround);
+    //}
+
+    //void OnTriggerEnter2D(Collider2D collider)
+
+    //{
+    //    HitByLaser(collider);
+
+    //}
+    //private bool isGroundCheckVisible = true;
+    //void HideGroundCheck()
+    //{
+    //    groundCheckTransform.gameObject.SetActive(false);
+    //    isGroundCheckVisible = false;
+    //}
+
+
+    //void HitByLaser(Collider2D laser)
+    //{
+    //    isDead = true;
+    //    contho.SetBool("isDead", true);
+    //    cameraScript.isCharacterDead = true; // ??t tr?ng thái s?ng/ch?t c?a nhân v?t trong script "Cameradich" thành true
+
+
+    //}
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,64 +93,48 @@ public class nhanvatbay : MonoBehaviour
 
         cameraScript = FindObjectOfType<Cameradich>();
 
-        rocketObject = GameObject.Find("Rocket");
+        rocketObject = GameObject.Find("Square");
     }
 
     void Update()
     {
-        if (!isDead) // Ki?m tra xem chu?t có s?ng hay ?ã ch?t
+        if (!isDead)
         {
             if (Input.GetKey(KeyCode.Space))
             {
                 rb.AddForce(Vector2.up * jumpForce);
             }
-            AudioSource laserZap = laserCollider.gameObject.GetComponent<AudioSource>();
-            laserZap.Play();
         }
         else
         {
-            rb.AddForce(Vector2.zero);
+           // rb.velocity = Vector2.zero;
         }
-       
+
         UpdateGroundedStatus();
     }
 
     void UpdateGroundedStatus()
     {
-        //1
         isGround = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);
-        //2
-        //   contho.SetBool("isGround", isGround);
         contho.SetBool("isGround", !isGround);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
-         
     {
         HitByLaser(collider);
-        
     }
-    private bool isGroundCheckVisible = true;
+
     void HideGroundCheck()
     {
         groundCheckTransform.gameObject.SetActive(false);
-        isGroundCheckVisible = false;
     }
 
-    public void HideRocket()
-    {
-        rocketObject.SetActive(false);
-    }
     void HitByLaser(Collider2D laser)
     {
         isDead = true;
         contho.SetBool("isDead", true);
-        cameraScript.isCharacterDead = true; // ??t tr?ng thái s?ng/ch?t c?a nhân v?t trong script "Cameradich" thành true
+        cameraScript.isCharacterDead = true;
 
-        LaserController laserController = laserCollider.GetComponent<LaserController>();
-        if (laserController != null)
-        {
-    //        laserController.HideRocket();
-        }
+        rocketObject.SetActive(false);
     }
 }

@@ -5,14 +5,15 @@ using UnityEngine;
 public class LaserController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject rocketObject;
+
     void Start()
     {
-        
+        rocketObject = GameObject.Find("Rocket");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HideRocket()
     {
-        
+        rocketObject.SetActive(false);
     }
 }
