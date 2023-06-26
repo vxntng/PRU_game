@@ -72,7 +72,7 @@ public class avc : MonoBehaviour
             tempCloud.transform.position += new Vector3(50, 0, 0);
             tempTree.transform.position += new Vector3(50, 0, 0);
             cloud = tempCloud;
-            treepre = tempTree;
+            tree = tempTree;
         }
         if (contho.transform.position.x > obstacle2.transform.position.x)
         {
