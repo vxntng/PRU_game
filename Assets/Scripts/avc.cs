@@ -9,10 +9,7 @@ public class avc : MonoBehaviour
     public GameObject trannha;
     public GameObject trannhapre;
     public GameObject contho;
-    public GameObject cloud;
-    public GameObject tree;
-    public GameObject cloudpre;
-    public GameObject treepre;
+
 
     // Start is called before the first frame update
 
@@ -47,6 +44,9 @@ public class avc : MonoBehaviour
     }
     void SetTransform(GameObject obstacle, float referenceX)
     {
+        float obstacleScaleY = Random.Range(minObstacleScaleY, maxObstacleY);
+        float obstacleSpacing = Random.Range(minObstacleSpacing, maxObstacleSpacing);
+
         obstacle.transform.position = new Vector3(referenceX + Random.Range(minObstacleSpacing, maxObstacleSpacing), Random.Range(minObstacleY, maxObstacleY), 0);
         obstacle.transform.localScale = new Vector3(obstacle.transform.localScale.x, Random.Range(minObstacleScaleY, maxObstacleY), obstacle.transform.localScale.z);
     }
@@ -65,14 +65,7 @@ public class avc : MonoBehaviour
             trannha = tempCeiling;
             floor = tempFloor;
 
-            var tempCloud = cloudpre;
-            var tempTree = treepre;
-            cloudpre = cloud;
-           treepre = tree;
-            tempCloud.transform.position += new Vector3(50, 0, 0);
-            tempTree.transform.position += new Vector3(50, 0, 0);
-            cloud = tempCloud;
-            tree = tempTree;
+        
         }
         if (contho.transform.position.x > obstacle2.transform.position.x)
         {
