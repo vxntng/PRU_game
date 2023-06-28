@@ -92,8 +92,8 @@ public class nhanvatbay : MonoBehaviour
 
     void AdjustFootstepsAndJetpackSound(bool jetpackActive)
     {
-        footstepsAudio.enabled = !isDead && isGround;
-        jetpackAudio.enabled = !isDead && !isGround;
+        footstepsAudio.enabled = isDead==false && isGround;
+        jetpackAudio.enabled = isDead==false && !isGround;
         if (jetpackActive)
         {
             jetpackAudio.volume = 1.0f;
