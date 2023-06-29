@@ -8,7 +8,7 @@ public class laser : MonoBehaviour
     public Sprite laserOnSprite;
     public Sprite laserOffSprite;
     //2
-    public float toggleInterval = 0.5f;
+    public float toggleInterval = 0.4f;
     public float rotationSpeed = 0.0f;
     //3
     private bool isLaserOn = true;
@@ -17,13 +17,16 @@ public class laser : MonoBehaviour
     private Collider2D laserCollider;
     private SpriteRenderer laserRenderer;
 
- 
+    public float minSize = 0.5f;
+    public float maxSize = 1.5f;
     void Start()
     {
         timeUntilNextToggle = toggleInterval;
         //2
         laserCollider = gameObject.GetComponent<Collider2D>();
         laserRenderer = gameObject.GetComponent<SpriteRenderer>();
+        float randomSize = Random.Range(minSize, maxSize);
+        transform.localScale = new Vector3(randomSize, randomSize, 1f);
     }
 
     private void Update()
@@ -52,5 +55,5 @@ public class laser : MonoBehaviour
         transform.RotateAround(transform.position, Vector3.forward, rotationSpeed * Time.deltaTime);
     }
 
-  
+
 }
