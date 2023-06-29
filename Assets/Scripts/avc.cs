@@ -47,9 +47,12 @@ public class avc : MonoBehaviour
         float obstacleScaleY = Random.Range(minObstacleScaleY, maxObstacleY);
         float obstacleSpacing = Random.Range(minObstacleSpacing, maxObstacleSpacing);
 
-        obstacle.transform.position = new Vector3(referenceX + Random.Range(minObstacleSpacing, maxObstacleSpacing), Random.Range(minObstacleY, maxObstacleY), 0);
-        obstacle.transform.localScale = new Vector3(obstacle.transform.localScale.x, Random.Range(minObstacleScaleY, maxObstacleY), obstacle.transform.localScale.z);
+        //obstacle.transform.position = new Vector3(referenceX + Random.Range(minObstacleSpacing, maxObstacleSpacing), Random.Range(minObstacleY, maxObstacleY), 0);
+        //obstacle.transform.localScale = new Vector3(obstacle.transform.localScale.x, Random.Range(minObstacleScaleY, maxObstacleY), obstacle.transform.localScale.z);
+        obstacle.transform.position = new Vector3(referenceX + obstacleSpacing, Random.Range(minObstacleY, maxObstacleY), 0);
+        obstacle.transform.localScale = new Vector3(obstacle.transform.localScale.x, obstacleScaleY, obstacle.transform.localScale.z);
     }
+    
 
     // Update is called once per frame
     void Update()
