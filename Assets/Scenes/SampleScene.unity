@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eccaa9baa24f15429d9004e049c125b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 17
+  jumpForce: 10
   rb: {fileID: 1233484373}
   speed: 1
   contho: {fileID: 1233484376}
