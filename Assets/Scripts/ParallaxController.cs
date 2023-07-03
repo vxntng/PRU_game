@@ -29,5 +29,6 @@ public class ParallaxController : MonoBehaviour
     public void BossRaiAppeared() // Ph??ng th?c ?? ??t bossRaiAppeared thành true
     {
         bossRaiAppeared = true;
+        meshRenderer.sortingOrder = -100;
     }
 }
