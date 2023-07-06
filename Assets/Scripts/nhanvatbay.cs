@@ -22,6 +22,8 @@ public class nhanvatbay : MonoBehaviour
     public AudioSource footstepsAudio;
     public AudioSource jetpackAudio;
     public AudioSource dieAudio;
+
+    private ScoreManager scoreManager;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

@@ -10,9 +10,11 @@ public class ScoreManager : MonoBehaviour
     public TMP_Text text;
     public float distanceTraveled;
     public int pointsPerMeter = 100;
-    
-    private int score;
+
+    public int score;
     private nhanvatbay player;
+
+    private Gameover gameover;
 
     void Start()
     {
@@ -40,12 +42,12 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            
+          //ShowGameOverPanel();
         }
         // C?p nh?t UI c?a ?i?m s?
         text.text = score.ToString() + "m";
-
     }
+    
 }
 
 
