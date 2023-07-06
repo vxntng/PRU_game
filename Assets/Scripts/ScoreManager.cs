@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
@@ -37,9 +38,13 @@ public class ScoreManager : MonoBehaviour
             // Tính ?i?m d?a trên quãng ???ng ?i ???c
             score = Mathf.RoundToInt(distanceTraveled * pointsPerMeter);
         }
-
+        else
+        {
+            
+        }
         // C?p nh?t UI c?a ?i?m s?
         text.text = score.ToString() + "m";
+
     }
 }
 
