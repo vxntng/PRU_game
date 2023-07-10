@@ -9,8 +9,9 @@ public class Gameover : MonoBehaviour
     public GameObject GameOver;
     public TMP_Text scoreText;
     private ScoreManager scoreManager;
+
     // Start is called before the first frame update
-    void ShowGameOverPanel()
+    public void ShowGameOverPanel()
     {
         // Hi?n th? panel game over
         GameOver.SetActive(true);
@@ -19,6 +20,7 @@ public class Gameover : MonoBehaviour
         scoreText.text = "Score " +
             scoreManager.score.ToString() + " m";
     }
+
     public void RestartGame()
     {
         // T?i l?i scene hi?n t?i
