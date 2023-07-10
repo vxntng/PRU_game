@@ -92,8 +92,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5663410436998448241}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c196d7a60cd1d78448ffa9510e75ac86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserOnSprite: {fileID: 21300000, guid: 55d2db9450628c2418b4ce781fb9812b, type: 3}
+  laserOffSprite: {fileID: 21300000, guid: 3bcc1e285bd973f4cb299a929d7c7c02, type: 3}
+  toggleInterval: 0.4
+  rotationSpeed: 0
+  minSize: 0.5
+  maxSize: 1.5

@@ -24,7 +24,7 @@ public class avc : MonoBehaviour
     public float maxObstacleY = 2f;
 
     public float minObstacleSpacing = 5f;
-    public float maxObstacleSpacing = 10f;
+    public float maxObstacleSpacing = 9f;
 
     public float minObstacleScaleY = 2f;
     public float maxObstacleScaleY = 7f;
@@ -52,7 +52,12 @@ public class avc : MonoBehaviour
         obstacle.transform.position = new Vector3(referenceX + obstacleSpacing, Random.Range(minObstacleY, maxObstacleY), 0);
         obstacle.transform.localScale = new Vector3(obstacle.transform.localScale.x, obstacleScaleY, obstacle.transform.localScale.z);
     }
-    
+        //void SetTransform(GameObject obstacle, float referenceX)
+        //{
+        //    obstacle.transform.position = new Vector3(referenceX + Random.Range(minObstacleSpacing, maxObstacleSpacing), Random.Range(minObstacleY, maxObstacleY), 0);
+        //    obstacle.transform.localScale = new Vector3(obstacle.transform.localScale.x, Random.Range(minObstacleScaleY, maxObstacleY), obstacle.transform.localScale.z);
+        //}
+
 
     // Update is called once per frame
     void Update()
@@ -68,7 +73,7 @@ public class avc : MonoBehaviour
             trannha = tempCeiling;
             floor = tempFloor;
 
-        
+
         }
         if (contho.transform.position.x > obstacle2.transform.position.x)
         {
