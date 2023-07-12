@@ -21,7 +21,7 @@ public class avc : MonoBehaviour
     public GameObject obstaclePrefab;
 
     public float minObstacleY = -1f;
-    public float maxObstacleY = 2f;
+    public float maxObstacleY = 1f;
 
     public float minObstacleSpacing = 5f;
     public float maxObstacleSpacing = 9f;
