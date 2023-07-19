@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         LoadHighScore();
-        UpdateHighScoreText();
+      
     }
 
     private void LoadHighScore()
@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateHighScoreText()
-    {
-        highScoreText.text = "High Score: " + highScore.ToString() + "m";
-    }
+    //public void UpdateHighScoreText()
+    //{
+    //    highScoreText.text = "High Score: " + highScore.ToString() + "m";
+    //}
 }

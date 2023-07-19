@@ -145,23 +145,31 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static ScoreManager instance;
     public TMP_Text text;
     public float distanceTraveled;
     public int pointsPerMeter = 100;
 
     public int score { get; private set; }
-    private int highScore;
+    static public int highScore;
     private nhanvatbay player;
 
     private const string HighScoreKey = "HighScore";
 
-    private GameManager gameManager;
-
+    [SerializeField]private GameManager gameManager;
+    private void Awake()
+    {
+        // T?o singleton instance
+        if (instance == null)
+        {
+            instance = this;
+        }
+       
+    }
     private void Start()
     {
         player = FindObjectOfType<nhanvatbay>();
-        gameManager = FindObjectOfType<GameManager>();
-        LoadHighScore();
+     
         score = 0;
     }
 
@@ -181,7 +189,7 @@ public class ScoreManager : MonoBehaviour
             {
                 highScore = score;
                 SaveHighScore();
-                gameManager.UpdateHighScoreText();
+             
             }
         }
 
@@ -189,13 +197,13 @@ public class ScoreManager : MonoBehaviour
         text.text = "Score: " + score.ToString() + "m";
     }
 
-    private void SaveHighScore()
+    static public void SaveHighScore()
     {
         PlayerPrefs.SetInt(HighScoreKey, highScore);
         PlayerPrefs.Save();
     }
 
-    private void LoadHighScore()
+    static public void LoadHighScore()
     {
         if (PlayerPrefs.HasKey(HighScoreKey))
         {

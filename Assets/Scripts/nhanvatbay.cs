@@ -136,6 +136,8 @@ public class nhanvatbay : MonoBehaviour
     public GameObject rocketObject;
     public GameObject fireObject;
 
+    public GameObject gameOverScene;
+
     public AudioSource footstepsAudio;
     public AudioSource jetpackAudio;
     public AudioSource dieAudio;
@@ -182,6 +184,7 @@ public class nhanvatbay : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(Time.timeScale);
         bool jetpackActive = Input.GetButton("Fire1");
         jetpackActive = jetpackActive && !isDead;
 
@@ -250,21 +253,20 @@ public class nhanvatbay : MonoBehaviour
     }
     void Die()
     {
-        // X? lý khi nhân v?t ch?t (ví d?: hi?n th? màn hình gameover)
-        // ...
-
-        // ?ánh d?u nhân v?t ?ã ch?t
+        
         isDead = true;
         contho.SetBool("isDead", true);
         cameraScript.isCharacterDead = true;
         dieAudio.Play(); // Phát âm thanh dieAudio
 
-        // ? ?ây b?n không c?n t?t ??i t??ng rocketObject
-        // rocketObject.SetActive(false);
-
-        // Hi?n th? màn hình gameover
-       // gameOver.ShowGameOverPanel();
+        Invoke("changeToGameOver",3f);
     }
+
+    void changeToGameOver()
+    {
+        gameOverScene.SetActive(true);
+    }
+
     void AdjustFootstepsAndJetpackSound(bool jetpackActive)
     {
         footstepsAudio.enabled = isDead == false && isGround;

@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
+    public TMP_Text highscore;
     private bool isPaused = false;
 
+    private void Start()
+    {
+        ScoreManager.LoadHighScore(); 
+        highscore.text ="High score: " +ScoreManager.highScore;
+    }
     public void OnPauseButtonClicked()
     {
         if (isPaused)
@@ -24,95 +31,17 @@ public class Menu : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    //    Time.timeScale = 0f; // T?m d?ng game
-    //    isPaused = true;
-    //    AudioListener.pause = true; // T?m d?ng âm thanh
-
-    //    // T?m d?ng hi?n th? mesh (n?u có)
-    //    Renderer[] renderers = FindObjectsOfType<Renderer>();
-    //    foreach (Renderer renderer in renderers)
-    //    {
-    //        renderer.enabled = false;
-    //    }
-    //    SceneManager.LoadScene(2);
-    //}
+    
 
     public void ResumeGame()
     {
         Sample.SetActive(false);
         Time.timeScale = 1;
     }
-    //    //Time.timeScale = 1f; // Ti?p t?c game
-    //    //isPaused = false;
-    //    //AudioListener.pause = false; // Ti?p t?c phát âm thanh
-
-    //    //// Hi?n th? l?i mesh (n?u có)
-    //    //Renderer[] renderers = FindObjectsOfType<Renderer>();
-    //    //foreach (Renderer renderer in renderers)
-    //    //{
-    //    //    renderer.enabled = true;
-    //    //}
-    //    //SceneManager.LoadScene(1);
-
-    //    Time.timeScale = 1f; // Ti?p t?c game
-    //    AudioListener.pause = false; // Ti?p t?c phát âm thanh
-
-    //    // Hi?n th? l?i mesh (n?u có)
-    //    Renderer[] renderers = FindObjectsOfType<Renderer>();
-    //    foreach (Renderer renderer in renderers)
-    //    {
-    //        renderer.enabled = true;
-    //    }
-
-    //    SceneManager.LoadScene(1);
-    //}
-    //    private void Pause()
-    //{
-    //    Time.timeScale = 0f; // T?m d?ng game
-    //    isPaused = true;
-    //    AudioListener.pause = true; // T?m d?ng âm thanh
-
-    //    // T?m d?ng hi?n th? mesh (n?u có)
-    //    Renderer[] renderers = FindObjectsOfType<Renderer>();
-    //    foreach (Renderer renderer in renderers)
-    //    {
-    //        renderer.enabled = false;
-    //    }
-    //   // SceneManager.LoadScene(2); // Chuy?n ??n Scene Game
-    //}
-
-    //public void ResumeGame()
-    //{
-
-    //    Time.timeScale = 1f; // Ti?p t?c game
-    //    AudioListener.pause = false; // Ti?p t?c phát âm thanh
-
-    //    // Hi?n th? l?i mesh (n?u có)
-    //    Renderer[] renderers = FindObjectsOfType<Renderer>();
-    //    foreach (Renderer renderer in renderers)
-    //    {
-    //        renderer.enabled = true;
-    //    }
-
-    //  //  SceneManager.LoadScene("SampleScene"); // Chuy?n ??n Scene Game
-    //}
-
-    //private void ResumeGame()
-    //{
-    //    Time.timeScale = 1f; // Ti?p t?c game
-    //    AudioListener.pause = false; // Ti?p t?c phát âm thanh
-
-    //    // Hi?n th? l?i mesh (n?u có)
-    //    Renderer[] renderers = FindObjectsOfType<Renderer>();
-    //    foreach (Renderer renderer in renderers)
-    //    {
-    //        renderer.enabled = true;
-    //    }
-
-    //    SceneManager.LoadScene(1); // Chuy?n ??n Scene Game
-    //}
+    
     public void ChoiMoi()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
 
