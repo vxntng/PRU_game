@@ -142,6 +142,21 @@ public class nhanvatbay : MonoBehaviour
 
     private Gameover gameOver;
 
+    //void Start()
+    //{
+    //    rb = GetComponent<Rigidbody2D>();
+    //    contho = GetComponent<Animator>();
+    //    HideGroundCheck();
+
+    //    cameraScript = FindObjectOfType<Cameradich>();
+
+    //    rocketObject = GameObject.Find("Square");
+    //    fireObject = GameObject.Find("Fire");
+    //    fireObject.SetActive(false);
+
+    //    gameOver = FindObjectOfType<Gameover>();
+    //}
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -154,9 +169,17 @@ public class nhanvatbay : MonoBehaviour
         fireObject = GameObject.Find("Fire");
         fireObject.SetActive(false);
 
-        gameOver = FindObjectOfType<Gameover>();
-    }
+        // Gán giá tr? cho bi?n dieAudio thông qua GetComponent
+        dieAudio = GetComponent<AudioSource>();
 
+        // Gán giá tr? cho bi?n footstepsAudio và jetpackAudio thông qua GetComponent
+        footstepsAudio = GetComponent<AudioSource>();
+        jetpackAudio = GetComponent<AudioSource>();
+
+        // Gán giá tr? cho bi?n gameOver thông qua FindObjectOfType
+        gameOver = FindObjectOfType<Gameover>();
+
+    }
     void Update()
     {
         bool jetpackActive = Input.GetButton("Fire1");
@@ -187,7 +210,10 @@ public class nhanvatbay : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        HitByLaser(collider);
+        if (collider.CompareTag("Laser")) // Ki?m tra xem collider có là lo?i "Laser" không
+        {
+            HitByLaser(collider);
+        }
     }
 
     void HideGroundCheck()
@@ -195,19 +221,50 @@ public class nhanvatbay : MonoBehaviour
         groundCheckTransform.gameObject.SetActive(false);
     }
 
+    //void HitByLaser(Collider2D laser)
+    //{
+    //    // dieAudio.enabled = isDead == true;
+    //    isDead = true;
+    //    contho.SetBool("isDead", true);
+    //    cameraScript.isCharacterDead = true;
+    //    dieAudio.Play(); // Phát âm thanh dieAudio
+
+    //    rocketObject.SetActive(false);
+
+    //    gameOver.ShowGameOverPanel();
+    //}
     void HitByLaser(Collider2D laser)
     {
-        // dieAudio.enabled = isDead == true;
+        if (laser != null)
+        {
+            // X? lý khi va ch?m v?i laser (ví d?: gi?m m?ng c?a nhân v?t)
+            // ...
+
+            // Sau khi x? lý, g?i ph??ng th?c trong script nhân v?t ?? x? lý khi ch?t và hi?n th? màn hình gameover
+            Die();
+        }
+        else
+        {
+            Debug.LogWarning("Laser collider is null.");
+        }
+    }
+    void Die()
+    {
+        // X? lý khi nhân v?t ch?t (ví d?: hi?n th? màn hình gameover)
+        // ...
+
+        // ?ánh d?u nhân v?t ?ã ch?t
         isDead = true;
         contho.SetBool("isDead", true);
         cameraScript.isCharacterDead = true;
         dieAudio.Play(); // Phát âm thanh dieAudio
 
-        rocketObject.SetActive(false);
+        // ? ?ây b?n không c?n t?t ??i t??ng rocketObject
+        // rocketObject.SetActive(false);
 
-        gameOver.ShowGameOverPanel();
+        // Hi?n th? màn hình gameover
+       // gameOver.ShowGameOverPanel();
     }
-
     void AdjustFootstepsAndJetpackSound(bool jetpackActive)
     {
         footstepsAudio.enabled = isDead == false && isGround;
