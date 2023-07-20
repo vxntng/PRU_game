@@ -119,7 +119,7 @@ public class nhanvatbay : MonoBehaviour
         cameraScript.isCharacterDead = true;
         dieAudio.Play(); // Phát âm thanh dieAudio
 
-        Invoke("changeToGameOver",3f);
+        Invoke("changeToGameOver",2f);
     }
 
     void changeToGameOver()

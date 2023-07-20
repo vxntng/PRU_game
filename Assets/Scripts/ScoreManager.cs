@@ -169,7 +169,7 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<nhanvatbay>();
-     
+        LoadHighScore();
         score = 0;
     }
 
