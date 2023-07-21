@@ -146,7 +146,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public TMP_Text text;
+    public TMP_Text text; 
     public float distanceTraveled;
     public int pointsPerMeter = 100;
 
