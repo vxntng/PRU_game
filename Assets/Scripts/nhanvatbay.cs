@@ -87,6 +87,7 @@ public class nhanvatbay : MonoBehaviour
         if (collider.CompareTag("Laser")) // Ki?m tra xem collider có là lo?i "Laser" không
         {
             HitByLaser(collider);
+
         }
     }
 
@@ -100,10 +101,7 @@ public class nhanvatbay : MonoBehaviour
     {
         if (laser != null)
         {
-            // X? lý khi va ch?m v?i laser (ví d?: gi?m m?ng c?a nhân v?t)
-            // ...
-
-            // Sau khi x? lý, g?i ph??ng th?c trong script nhân v?t ?? x? lý khi ch?t và hi?n th? màn hình gameover
+          
             Die();
         }
         else
@@ -121,7 +119,16 @@ public class nhanvatbay : MonoBehaviour
 
         Invoke("changeToGameOver",2f);
     }
+    void tenlua()
+    {
 
+        isDead = true;
+        contho.SetBool("isDead", true);
+        cameraScript.isCharacterDead = true;
+        dieAudio.Play(); // Phát âm thanh dieAudio
+
+        Invoke("changeToGameOver", 2f);
+    }
     void changeToGameOver()
     {
         gameOverScene.SetActive(true);

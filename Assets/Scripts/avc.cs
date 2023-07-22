@@ -9,7 +9,7 @@ public class avc : MonoBehaviour
     public GameObject trannha;
     public GameObject trannhapre;
     public GameObject contho;
-
+    
 
     // Start is called before the first frame update
 
