@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a0dee04aa2a32468ba87a675f4d9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSpeed: 3
+  cameraSpeed: 4
   isCharacterDead: 0
 --- !u!212 &519420034
 SpriteRenderer:

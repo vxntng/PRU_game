@@ -61,20 +61,31 @@ public class nhanvatbay : MonoBehaviour
 
         if (!isDead)
         {
-            if (Input.GetKey(KeyCode.Space))
+            //if (Input.GetKey(KeyCode.Space))
+            //{
+            //    rb.AddForce(Vector2.up * jumpForce);
+            //}
+            if (Input.touchCount > 0)
             {
-                rb.AddForce(Vector2.up * jumpForce);
+                Touch touch = Input.GetTouch(0);
+
+                // N?u ng??i dùng ch?m vào màn hình (b?t k? n?i ch?m)
+                if (touch.phase == TouchPhase.Began)
+                {
+                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                }
             }
         }
         else
         {
-            // rb.velocity = Vector2.zero;
+          
         }
 
         UpdateGroundedStatus();
         AdjustFootstepsAndJetpackSound(jetpackActive);
         UpdateFireObject();
     }
+    
 
     void UpdateGroundedStatus()
     {
