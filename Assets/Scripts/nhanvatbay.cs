@@ -53,6 +53,7 @@ public class nhanvatbay : MonoBehaviour
         gameOver = FindObjectOfType<Gameover>();
 
     }
+    private bool isJumping = false;
     void Update()
     {
         Debug.Log(Time.timeScale);
@@ -69,10 +70,17 @@ public class nhanvatbay : MonoBehaviour
             {
                 Touch touch = Input.GetTouch(0);
 
-                // N?u ng??i dùng ch?m vào màn hình (b?t k? n?i ch?m)
+                // Khi ngón tay ch?m vào màn hình
                 if (touch.phase == TouchPhase.Began)
                 {
-                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    // B?t ??u nh?y
+                    isJumping = true;
+                }
+                // Khi ngón tay r?i kh?i màn hình
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    // K?t thúc nh?y
+                    isJumping = false;
                 }
             }
         }
@@ -85,8 +93,15 @@ public class nhanvatbay : MonoBehaviour
         AdjustFootstepsAndJetpackSound(jetpackActive);
         UpdateFireObject();
     }
-    
 
+    private void FixedUpdate()
+    {
+        // N?u ?ang trong tr?ng thái nh?y, thêm l?c nh?y liên t?c trong m?i khung hình
+        if (isJumping)
+        {
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
     void UpdateGroundedStatus()
     {
         isGround = Physics2D.OverlapCircle(groundCheckTransform.position, 0.1f, groundCheckLayerMask);

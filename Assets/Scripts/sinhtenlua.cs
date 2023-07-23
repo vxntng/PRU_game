@@ -8,7 +8,7 @@ public class sinhtenlua : MonoBehaviour
     
     void Start()
     {
-        InvokeRepeating("sinh",0,5);
+        InvokeRepeating("sinh",10,8);
         
     }
 
