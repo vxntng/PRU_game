@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ParallaxController : MonoBehaviour
 {
+    //backgorund
     private MeshRenderer meshRenderer;
     public float animationSpeed = 0.2f;
-    private bool bossRaiAppeared = false; // Bi?n ?? ki?m tra BossRai ?ã xu?t hi?n hay ch?a
+    private bool bossRaiAppeared = false; 
     private nhanvatbay nhanvatbay;
     private void Awake()
     {
